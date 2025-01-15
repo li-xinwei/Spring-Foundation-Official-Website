@@ -17,6 +17,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+  zoom: 90%;
 }
 
 
@@ -97,17 +98,27 @@
     
         <div class="row align-items-md-stretch">
           <div class="col-md-6">
-            <div class="h-100 p-5 text-bg-dark rounded-3">
-              <h2>Change the background</h2>
-              <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-              <button class="btn btn-outline-light" type="button">Example button</button>
+            <div class="h-100 p-5 rounded-3 d-flex" style="background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);">
+              <div class="flex-grow-1 pe-4">
+                <h2 class="text-white mb-4">Lectures</h2>
+                <ul class="text-white fs-5 mt-4">
+                  <li class="mb-3">Bi-weekly weekend lectures</li>
+                  <li class="mb-3">Free and open to all students</li>
+                  <li class="mb-3">Wide range of topics taught by university partners</li>
+                </ul>
+              </div>
+              <div class="d-flex flex-column gap-3 justify-content-center">
+                <img src="/static/images/ZJU.png" alt="ZJU Logo" class="rounded-circle" width="80" height="80" style="object-fit: cover; background-color: white; padding: 8px;">
+                <img src="/static/images/logo-white.png" alt="Logo" class="rounded-circle" width="80" height="80" style="object-fit: cover; background-color: white; padding: 8px;">
+              </div>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="h-100 p-5 bg-body-tertiary border rounded-3">
-              <h2>Add borders</h2>
-              <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-              <button class="btn btn-outline-secondary" type="button">Example button</button>
+            <div class="h-100 p-5 rounded-3 d-flex flex-column justify-content-center" style="background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);">
+              <blockquote class="text-white m-0" style="font-family: 'Courier New', monospace;">
+                <p class="display-6 mb-3">"Education is the most powerful weapon which you can use to change the world."</p>
+                <footer class="text-white-50 fs-5">— Nelson Mandela</footer>
+              </blockquote>
             </div>
           </div>
         </div>
