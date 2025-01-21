@@ -8,17 +8,55 @@
     <link rel="icon" href="/static/images/logo-white.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-<style>
-  body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            background-color: #f8f9fa;
+        }
+        .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .member-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 15px;
+        }
+        .member-info {
+            padding: 20px;
+        }
+        .member-role {
+            color: rgb(49, 108, 244);
+            font-weight: 600;
+        }
+        .member-bio {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 8px;
+        }
+        .page-header {
+            background: linear-gradient(to right, rgb(49, 108, 244, 0.1), rgb(49, 108, 244, 0.05));
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+        .page-title {
+            color: rgb(49, 108, 244);
+            text-align: center;
+            margin: 20px 0;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -26,8 +64,7 @@
           <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <div class="me-3">
               <img src="/static/images/logo.png" alt="logo" width="80px" height="80px">
-              
-    </div>
+            </div>
             <span class="fs-4 mt-2" style="color:rgb(49, 108, 244);">Spring Foundation <br><p style="color: black; font-size: 15px; font-weight: 300;line-height: 10px;">Serve with all your heart</p></span>
           </a>
     
@@ -35,377 +72,440 @@
             <li class="nav-item"><a href="/index.html" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="/templates/about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="/templates/projects.html" class="nav-link">Projects</a></li>
-           
             <li class="nav-item"><a href="/templates/Q&A.html" class="nav-link">Q&A</a></li>
-              <li class="nav-item"><a href="/templates/contacts.html" class="nav-link">Contacts</a></li>
-    
+            <li class="nav-item"><a href="/templates/contacts.html" class="nav-link">Contacts</a></li>
           </ul>
         </header>
-      </div>
-      <h1 style="text-align: center; color:rgb(49, 108, 244); margin-top: 20px;">Our Team</h1>
-      <div class="container mt-4">
-        <div class="row g-4 justify-content-center">
-          <!-- Yixin -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/yixin.jpeg" alt="yixin" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">President:</span> 
-                  Yixin Feng
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Yixin Feng has been the president of Spring Foundation since the 2024 Spring term
-                </p>
-              </div>
-            </div>
-          </div>
+    </div>
 
-          <!-- Justine -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/justine.png" alt="justine" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Internal Vice President:</span> 
-                  Justine Xie
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Justine is a junior majoring in Economics and minoring in Data Science. In her free time, she enjoys playing the flute & ukulele, art journaling, skiing, badminton, and watching sunsets.
-                </p>
-              </div>
-            </div>
-          </div>
+    <div class="page-header">
+        <h1 class="page-title">Our Team</h1>
+    </div>
 
-          <!-- Jessica -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/jessica.jpeg" alt="jessica" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">External Vice President:</span> 
-                  Jessica Xu
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Jessica Xu has been the president of Spring Foundation since the 2024 Spring term
-                </p>
-              </div>
+    <div class="container">
+        <div class="row g-4">
+            <!-- Leadership Team -->
+            <!-- Yuheng -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/yuheng.pic.jpg" alt="yuheng" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">President:</span>
+                                Yuheng Wang
+                            </h5>
+                            <p class="member-bio">
+                                王宇恒 大二学生
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Will -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/will.pic.jpg" alt="will" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Mume Program Leader:</span> 
-                  Will Dong
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Will Dong (He/Him/Hims) is the Co-Project Lead of Mume Program, leading the overall vision and growth strategy of Spring Foundation. Sophomore at UC Berkeley studying Molecular Environmental Biology.
-                </p>
-              </div>
+            <!-- Will -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/will.pic.jpg" alt="will" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Internal Vice President:</span>
+                                Will Dong
+                            </h5>
+                            <p class="member-bio">
+                                Will Dong (He/Him/Hims) is the Co-Project Lead of Mume Program, leading the overall vision and growth strategy of Spring Foundation. Sophomore at UC Berkeley studying Molecular Environmental Biology.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Yuheng -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/yuheng.pic.jpg" alt="yuheng" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Mume Program Leader:</span> 
-                  Yuheng Wang
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  王宇恒 大二学生
-                </p>
-              </div>
+            <!-- Margaret -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/margaret.pic.jpg" alt="margaret" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Operational Vice President:</span>
+                                Margaret Jing
+                            </h5>
+                            <p class="member-bio">
+                                Margaret Jing (She/Her/Hers) is a sophomore at UC Berkeley, majoring in Political Economy. As Project Leader of Flow, she is dedicated to combating educational inequality for girls at an economic disadvantage. She loves musical shows, with Hamilton being her favorite. "I'm rooted, but I flow."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Amelia -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/amelia.pic.jpg" alt="amelia" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Mume Program Member:</span> 
-                  Amelia Jin
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Amelia Jin (She/Her/Hers) is a sophomore at UC Berkeley double majoring in economics and data science. She is passionate about volunteering and tutoring. In her free time, she likes to hang out with friends and try new foods.
-                </p>
-              </div>
+            <!-- Advisors -->
+            <!-- Tony -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/tony.jpg" alt="tony" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Advisor:</span>
+                                Tony Tan
+                            </h5>
+                            <p class="member-bio">
+                                Senior at UC Berkeley, majoring in Economics and Statistics. Zixun is passionate about rural education and poverty alleviation in China. Love board games. "Early is on time, on time is late, and late is unacceptable."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Eliza -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/eliza.pic.jpg" alt="eliza" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Mume Program Member:</span> 
-                  Eliza Cao
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Yuexuan Cao (She/Her/Hers) is a junior student majoring in Economics. Deeply interested in education issues and aims to make a positive impact in this field."The world kissed me with pain, and asked me to repay with a song."
-                </p>
-              </div>
+            <!-- Dalton -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/dalton.png" alt="dalton" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Advisor:</span>
+                                Dalton Meng
+                            </h5>
+                            <p class="member-bio">
+                                A 4th year studying CS & Math at UC Berkeley. In his free time, he loves cooking, sleeping, coding and playing Super Smash Bros. "血染带我一个"
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Qinggao -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/qinggao.pic.jpg" alt="qinggao" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Mume Program Member:</span> 
-                  Qinggao Hong
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Junior at UC Berkeley, majoring in CS and minoring in Logic. Passionate about helping underprivileged communities through personal efforts. He's an active member of the official 3Blue1Brown Chinese subtitle translation group on Bilibili. "Happiness is the highest good."
-                </p>
-              </div>
+            <!-- Team Members -->
+            <!-- Yixin -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/yixin.jpeg" alt="yixin" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Yixin Feng
+                            </h5>
+                            <p class="member-bio">
+                                Senior at UC Berkeley, majoring in Economics and Statistics. Yixin is passionate about rural education in China and spearheading initiatives for asynchronous learning.Loves film photography and spends his free time capturing landscapes around Hangzhou！"Education empowers us to build a better world."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Matt -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/matt.pic.jpg" alt="matt" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Mume Program Member:</span> 
-                  Matthew Chen
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Matthew Chen (He/Him/His) is a Junior student at Cal majoring in Physics. He is passionate about using physics to provide sustainable solutions to energy. A former CIF Division One Badminton Champion. "Fiat Lux!"
-                </p>
-              </div>
+            <!-- Justine -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/justine.png" alt="justine" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Justine Xie
+                            </h5>
+                            <p class="member-bio">
+                                Justine is a junior majoring in Economics and minoring in Data Science. In her free time, she enjoys playing the flute & ukulele, art journaling, skiing, badminton, and watching sunsets.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Iris -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/iris.pic.jpg" alt="iris" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Read With Me Program Leader:</span>
-                  Iris Zhu
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Iris is a junior architecture major with a minor in history. She is passionate about bringing the joy of reading to underprivileged children and creating a communication space where students feel safe. "The world is full of magic things, patiently waiting for our senses to grow sharper."
-                </p>
-              </div>
+            <!-- Jessica -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/jessica.jpeg" alt="jessica" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Jessica Xu
+                            </h5>
+                            <p class="member-bio">
+                                Jessica Xu has been the president of Spring Foundation since the 2024 Spring term
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Margaret -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/margaret.pic.jpg" alt="margaret" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Flow Program Leader:</span>
-                  Margaret Jing
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Margaret Jing (She/Her/Hers) is a sophomore at UC Berkeley, majoring in Political Economy. As Project Leader of Flow, she is dedicated to combating educational inequality for girls at an economic disadvantage. She loves musical shows, with Hamilton being her favorite. "I'm rooted, but I flow."
-                </p>
-              </div>
+            <!-- Amelia -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/amelia.pic.jpg" alt="amelia" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Amelia Jin
+                            </h5>
+                            <p class="member-bio">
+                                Amelia Jin (She/Her/Hers) is a sophomore at UC Berkeley double majoring in economics and data science. She is passionate about volunteering and tutoring. In her free time, she likes to hang out with friends and try new foods.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Sherry -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/sherry.pic.jpg" alt="sherry" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Flow Program Member:</span> 
-                  Sherry Yang
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  杨雪滢Sherry，UCB Sophomore，intended major：math+data science
-                </p>
-              </div>
+            <!-- Eliza -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/eliza.pic.jpg" alt="eliza" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Eliza Cao
+                            </h5>
+                            <p class="member-bio">
+                                Yuexuan Cao (She/Her/Hers) is a junior student majoring in Economics. Deeply interested in education issues and aims to make a positive impact in this field."The world kissed me with pain, and asked me to repay with a song."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- April -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/april.jpg" alt="april" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Flow Program Member:</span>
-                  April Geng
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Hi everyone! I am April Geng, a junior from the Bay Area. I am currently studying in Data Science and Econ, and I like to sing and make art pieces in my spare time. This is my first semester at the Spring Foundation, and I am really enjoying it :D.
-                </p>
-              </div>
+            <!-- Qinggao -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/qinggao.pic.jpg" alt="qinggao" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Qinggao Hong
+                            </h5>
+                            <p class="member-bio">
+                                Junior at UC Berkeley, majoring in CS and minoring in Logic. Passionate about helping underprivileged communities through personal efforts. He's an active member of the official 3Blue1Brown Chinese subtitle translation group on Bilibili. "Happiness is the highest good."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Xiaoyu -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/xiaoyu.jpg" alt="xiaoyu" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Operational Vice President:</span>
-                  Xiaoyu Fan
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Xiaoyu Fan (She/Her/Hers) is a junior at UC Berkeley, double majoring in Sociology and Social Welfare. Previously a team member of project Flow. "I dream of a world where every child has equal access to education, empowering them to pursue their dreams."
-                </p>
-              </div>
+            <!-- Matt -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/matt.pic.jpg" alt="matt" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Matthew Chen
+                            </h5>
+                            <p class="member-bio">
+                                Matthew Chen (He/Him/His) is a Junior student at Cal majoring in Physics. He is passionate about using physics to provide sustainable solutions to energy. A former CIF Division One Badminton Champion. "Fiat Lux!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Harry -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/harry.pic.jpg" alt="harry" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Read With Me Program Member:</span>
-                  Harry Qian
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  A junior majoring in Physics and minorning in EECS, originally from the vibrant city of Rome, Italy. Harry is passionate about staying active, with badminton and fitness being his go-to activities. He values connection and growth.
-                </p>
-              </div>
+            <!-- Iris -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/iris.pic.jpg" alt="iris" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Iris Zhu
+                            </h5>
+                            <p class="member-bio">
+                                Iris is a junior architecture major with a minor in history. She is passionate about bringing the joy of reading to underprivileged children and creating a communication space where students feel safe. "The world is full of magic things, patiently waiting for our senses to grow sharper."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Tony -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/tony.jpg" alt="tony" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Advisor:</span>
-                  Tony Tan
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Senior at UC Berkeley, majoring in Economics and Statistics. Zixun is passionate about rural education and poverty alleviation in China. Love board games. "Early is on time, on time is late, and late is unacceptable."
-                </p>
-              </div>
+            <!-- Sherry -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/sherry.pic.jpg" alt="sherry" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Sherry Yang
+                            </h5>
+                            <p class="member-bio">
+                                杨雪滢Sherry，UCB Sophomore，intended major：math+data science
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Uni -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/uni.pic.jpg" alt="uni" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Read With Me Program Member:</span>
-                  Unieng Sit
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  A junior double majoring in economics and data science. Passionate about education and public service. Takes a physical education class every semester. "The best time to plant a tree was twenty years ago. The second best time is now."
-                </p>
-              </div>
+            <!-- April -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/april.jpg" alt="april" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                April Geng
+                            </h5>
+                            <p class="member-bio">
+                                A junior from the Bay Area. Currently studying in Data Science and Econ, and like to sing and make art pieces in my spare time. Second semester at the Spring Foundation, and enjoying it :D.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Dalton -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/dalton.png" alt="dalton" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Advisor:</span>
-                  Dalton Meng
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  A 4th year studying CS & Math at UC Berkeley. In his free time, he loves cooking, sleeping, coding and playing Super Smash Bros. "血染带我一个"
-                </p>
-              </div>
+            <!-- Xiaoyu -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/xiaoyu.jpg" alt="xiaoyu" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Xiaoyu Fan
+                            </h5>
+                            <p class="member-bio">
+                                Xiaoyu Fan (She/Her/Hers) is a junior at UC Berkeley, double majoring in Sociology and Social Welfare. Previously a team member of project Flow. "I dream of a world where every child has equal access to education, empowering them to pursue their dreams."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Lindsay -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/lindsay.pic.jpg" alt="lindsay" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Read With Me Program Member:</span>
-                  Lindsay Yi
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Junior at UC Berkeley, majoring in Data Science and Economics. Love street and film photography, traveling, nature, boba, puppies, and museums. "Put everything aside and eat first."
-                </p>
-              </div>
+            <!-- Harry -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/harry.pic.jpg" alt="harry" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Harry Qian
+                            </h5>
+                            <p class="member-bio">
+                                A junior majoring in Physics and minorning in EECS, originally from the vibrant city of Rome, Italy. Harry is passionate about staying active, with badminton and fitness being his go-to activities. He values connection and growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Clare -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/clare.pic.jpg" alt="clare" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Read With Me Program Member:</span>
-                  Clare Ai
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Senior at UC Berkeley, majoring in Architecture. "Less is more"
-                </p>
-              </div>
+            <!-- Uni -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/uni.pic.jpg" alt="uni" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Unieng Sit
+                            </h5>
+                            <p class="member-bio">
+                                A junior double majoring in economics and data science. Passionate about education and public service. Takes a physical education class every semester. "The best time to plant a tree was twenty years ago. The second best time is now."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Fanjia -->
-          <div class="col-lg-6">
-            <div class="d-flex bg-white shadow-sm rounded">
-              <img src="/static/images/fanjia.png" alt="fanjia" class="rounded-start" style="width: 120px; height: 120px; object-fit: cover;">
-              <div class="d-flex flex-column justify-content-center px-4">
-                <h5 class="mb-1">
-                  <span style="color:rgb(49, 108, 244);">Mume Program Leader:</span>
-                  Fanjia Yan
-                </h5>
-                <p class="mb-0" style="font-size: 14px;">
-                  Master student at UC Berkeley, majoring in computer science. Passionate about rural education in China and spearheading initiatives for asynchronous learning. Loves video games and spends free time in Silent Hill. "Education empowers us to build a better world."
-                </p>
-              </div>
+            <!-- Lindsay -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/lindsay.pic.jpg" alt="lindsay" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Lindsay Yi
+                            </h5>
+                            <p class="member-bio">
+                                Junior at UC Berkeley, majoring in Data Science and Economics. Love street and film photography, traveling, nature, boba, puppies, and museums. "Put everything aside and eat first."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <!-- Clare -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/clare.pic.jpg" alt="clare" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Clare Ai
+                            </h5>
+                            <p class="member-bio">
+                                Senior at UC Berkeley, majoring in Architecture. "Less is more"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fanjia -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/fanjia.jpg" alt="fanjia" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Fanjia Yan
+                            </h5>
+                            <p class="member-bio">
+                                Master student at UC Berkeley, majoring in computer science. Loves video games and spends free time in Silent Hill. "Education empowers us to build a better world."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Xinwei -->
+            <div class="col-lg-6">
+                <div class="team-card">
+                    <div class="d-flex">
+                        <img src="/static/images/xinwei.jpg" alt="xinwei" class="member-img">
+                        <div class="member-info">
+                            <h5 class="mb-1">
+                                <span class="member-role">Member:</span>
+                                Xinwei Li
+                            </h5>
+                            <p class="member-bio">
+                                Sophomore at UC Berkeley, intend to major in Computer Science. Loves trading and playing badminton. "Not today."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-      </div>
-      
-      
-      
-      
-        <a href="/templates/about.html"><div class="d-flex justify-content-center align-items-center" style="margin-top: 50px;"><button type="button" class="btn btn-primary">Return</button></div></a>
+    </div>
 
-        <div class="container">
+    <div class="d-flex justify-content-center align-items-center" style="margin-top: 50px;">
+        <a href="/templates/about.html">
+            <button type="button" class="btn btn-primary">Return</button>
+        </a>
+    </div>
+
+    <div class="container">
         <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="/index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="/templates/about.html" class="nav-link px-2 text-body-secondary">About</a></li>
-            <li class="nav-item"><a href="/templates/projects.html" class="nav-link px-2 text-body-secondary">Projects</a></li>
-            
-            <li class="nav-item"><a href="/templates/Q&A.html" class="nav-link px-2 text-body-secondary">Q&A</a></li>
-            <li class="nav-item"><a href="/templates/contacts.html" class="nav-link px-2 text-body-secondary">Contacts</a></li>
-          </ul>
-          <p class="text-center text-body-secondary">© 2024 Spring Foundation @ University of California, Berkeley</p>
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="/index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="/templates/about.html" class="nav-link px-2 text-body-secondary">About</a></li>
+                <li class="nav-item"><a href="/templates/projects.html" class="nav-link px-2 text-body-secondary">Projects</a></li>
+                <li class="nav-item"><a href="/templates/Q&A.html" class="nav-link px-2 text-body-secondary">Q&A</a></li>
+                <li class="nav-item"><a href="/templates/contacts.html" class="nav-link px-2 text-body-secondary">Contacts</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 Spring Foundation @ University of California, Berkeley</p>
         </footer>
-      </div>
-      
-    
-    
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+
 </body>
 </html>

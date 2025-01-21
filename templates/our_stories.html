@@ -8,16 +8,64 @@
     <link rel="icon" href="/static/images/logo-white.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
   body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    background-color: #f8f9fa;
+  }
 
+  .hero-section {
+    background: linear-gradient(135deg, #316cf4 0%, #6495ED 100%);
+    padding: 80px 0;
+    color: white;
+    margin-bottom: 50px;
+  }
 
+  .story-section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 1000px;
+  }
+
+  .story-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #316cf4;
+  }
+
+  .return-button {
+    background: #316cf4;
+    border: none;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+  }
+
+  .return-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(49, 108, 244, 0.3);
+  }
 </style>
 </head>
 <body>
@@ -26,8 +74,7 @@
           <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <div class="me-3">
               <img src="/static/images/logo.png" alt="logo" width="80px" height="80px">
-              
-    </div>
+            </div>
             <span class="fs-4 mt-2" style="color:rgb(49, 108, 244);">Spring Foundation <br><p style="color: black; font-size: 15px; font-weight: 300;line-height: 10px;">Serve with all your heart</p></span>
           </a>
     
@@ -35,42 +82,57 @@
             <li class="nav-item"><a href="/index.html" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="/templates/about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="/templates/projects.html" class="nav-link">Projects</a></li>
-           
             <li class="nav-item"><a href="/templates/Q&A.html" class="nav-link">Q&A</a></li>
-              <li class="nav-item"><a href="/templates/contacts.html" class="nav-link">Contacts</a></li>
-    
+            <li class="nav-item"><a href="/templates/contacts.html" class="nav-link">Contacts</a></li>
           </ul>
         </header>
-      </div>
-      <h1 style="text-align: center; color:rgb(49, 108, 244); margin-top: 20px;">Our Stories</h1>
-      <p style="margin-left: 200px; margin-right: 200px;margin-top: 20px;font-size: 20px;">Spring Foundation is a non-profit organization founded by a group of passionate students in 2011 at UC Berkeley. Holding on to our core values ‘Family, Passion, Promise, and Empowerment’, we dedicate ourselves to improving the living standards and education accessibilities of underprivileged children in rural China. Through fundraisers, on-campus projects and summer visits, we empower them with knowledge, trust, and confidence to have a brighter future.
+    </div>
 
-        ​
-        
-        <br><br>In Fall 2011, 6 passionate students from diverse backgrounds met up to discuss how to make a difference during their short 4-year study at Berkeley. They had different academic interests, but they all shared a heartfelt concern for the underprivileged children in rural China. Through research and heated debate on how to best leverage our limited resources, Spring Foundation is the only student organization in Berkeley dedicated to supporting underprivileged children in rural China.
-        
-         
-        
-        <br><br>Over the years, we have grown into a larger organization with a size of about 25 active members and an alumni network of 98. Our members come from diverse academic disciplines and cultural backgrounds. We share the deep conviction that we should use our knowledge and platform to serve children who cannot voice for themselves.</p>
-        <a href="/templates/about.html"><div class="d-flex justify-content-center align-items-center" style="margin-top: 50px;"><button type="button" class="btn btn-primary">Return</button></div></a>
-
+    <div class="hero-section">
         <div class="container">
+            <h1 class="display-4 fw-bold text-center mb-4">Our Journey</h1>
+            <p class="lead text-center mb-0" style="max-width: 800px; margin: 0 auto;">
+                A story of passion, dedication, and making a difference in the lives of underprivileged children in rural China.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="story-section">
+            <div class="timeline-item story-text">
+                <h3 class="mb-3">Our Beginning</h3>
+                <p>Spring Foundation is a non-profit organization founded by a group of passionate students in 2011 at UC Berkeley. Holding on to our core values 'Family, Passion, Promise, and Empowerment', we dedicate ourselves to improving the living standards and education accessibilities of underprivileged children in rural China.</p>
+            </div>
+
+            <div class="timeline-item story-text">
+                <h3 class="mb-3">The Founding Story</h3>
+                <p>In Fall 2011, 6 passionate students from diverse backgrounds met up to discuss how to make a difference during their short 4-year study at Berkeley. They had different academic interests, but they all shared a heartfelt concern for the underprivileged children in rural China. Through research and heated debate on how to best leverage our limited resources, Spring Foundation became the only student organization in Berkeley dedicated to supporting underprivileged children in rural China.</p>
+            </div>
+
+            <div class="timeline-item story-text">
+                <h3 class="mb-3">Our Growth</h3>
+                <p>Over the years, we have grown into a larger organization with a size of about 25 active members and an alumni network of 98. Our members come from diverse academic disciplines and cultural backgrounds. We share the deep conviction that we should use our knowledge and platform to serve children who cannot voice for themselves.</p>
+            </div>
+        </div>
+
+        <div class="text-center mb-5">
+            <a href="/templates/about.html">
+                <button type="button" class="btn btn-primary btn-lg return-button">Return to About</button>
+            </a>
+        </div>
+
         <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="/index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="/templates/about.html" class="nav-link px-2 text-body-secondary">About</a></li>
-            <li class="nav-item"><a href="/templates/projects.html" class="nav-link px-2 text-body-secondary">Projects</a></li>
-            
-            <li class="nav-item"><a href="/templates/Q&A.html" class="nav-link px-2 text-body-secondary">Q&A</a></li>
-            <li class="nav-item"><a href="/templates/contacts.html" class="nav-link px-2 text-body-secondary">Contacts</a></li>
-          </ul>
-          <p class="text-center text-body-secondary">© 2024 Spring Foundation @ University of California, Berkeley</p>
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="/index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="/templates/about.html" class="nav-link px-2 text-body-secondary">About</a></li>
+                <li class="nav-item"><a href="/templates/projects.html" class="nav-link px-2 text-body-secondary">Projects</a></li>
+                <li class="nav-item"><a href="/templates/Q&A.html" class="nav-link px-2 text-body-secondary">Q&A</a></li>
+                <li class="nav-item"><a href="/templates/contacts.html" class="nav-link px-2 text-body-secondary">Contacts</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 Spring Foundation @ University of California, Berkeley</p>
         </footer>
-      </div>
-      
-    
-    
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
 </body>
 </html>

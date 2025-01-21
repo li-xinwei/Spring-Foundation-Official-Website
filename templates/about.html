@@ -35,17 +35,71 @@ a{
             <span class="fs-4 mt-2" style="color:rgb(49, 108, 244);">Spring Foundation <br><p style="color: black; font-size: 15px; font-weight: 300;line-height: 10px;">Serve with all your heart</p></span>
           </a>
     
-          <ul class="nav nav-pills mt-4">
+          <ul class="nav nav-pills mt-4 position-relative">
+            <div class="nav-indicator"></div>
             <li class="nav-item"><a href="/index.html" class="nav-link" aria-current="page">Home</a></li>
             <li class="nav-item"><a href="/templates/about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="/templates/projects.html" class="nav-link">Projects</a></li>
-            
             <li class="nav-item"><a href="/templates/Q&A.html" class="nav-link">Q&A</a></li>
-              <li class="nav-item"><a href="/templates/contacts.html" class="nav-link">Contacts</a></li>
-    
+            <li class="nav-item"><a href="/templates/contacts.html" class="nav-link">Contacts</a></li>
           </ul>
         </header>
       </div>
+
+      <style>
+        .nav-pills {
+          gap: 0.5rem;
+        }
+        
+        .nav-pills .nav-link {
+          position: relative;
+          z-index: 1;
+          transition: color 0.3s ease;
+          border-radius: 0.5rem;
+          padding: 0.5rem 1rem;
+        }
+
+        .nav-pills .nav-link:hover {
+          color: white;
+        }
+
+        .nav-indicator {
+          position: absolute;
+          height: 100%;
+          background-color: rgb(49, 108, 244);
+          border-radius: 0.5rem;
+          transition: all 0.3s ease;
+          opacity: 0;
+          z-index: 0;
+        }
+
+        .nav-link:hover ~ .nav-indicator {
+          opacity: 1;
+        }
+
+        .nav-pills .nav-item:hover ~ .nav-indicator {
+          opacity: 1;
+        }
+      </style>
+
+      <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const indicator = document.querySelector('.nav-indicator');
+
+        navLinks.forEach(link => {
+          link.addEventListener('mouseenter', (e) => {
+            const rect = e.target.getBoundingClientRect();
+            indicator.style.width = `${rect.width}px`;
+            indicator.style.left = `${rect.left - e.target.parentElement.parentElement.getBoundingClientRect().left}px`;
+            indicator.style.opacity = '1';
+          });
+        });
+
+        const navPills = document.querySelector('.nav-pills');
+        navPills.addEventListener('mouseleave', () => {
+          indicator.style.opacity = '0';
+        });
+      </script>
       
       <div class="row row-cols-1 row-cols-md-3 g-4 mt-1" style="margin-left: 180px; margin-right: 180px;">
         <a class="col-lg-4" href="/templates/our_stories.html">
