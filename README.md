@@ -1,7 +1,7 @@
 # Spring Foundation Website
 
 ## Overview
-This is the official website for Spring Foundation, a non-profit organization established by UC Berkeley students in 2011. The foundation focuses on uplifting rural Chinese youth through education and various support programs.
+This is the official website for Spring Foundation, a non-profit organization established by UC Berkeley students in 2011. The foundation focuses on uplifting rural Chinese youth through education and various support programs. The website is available at [https://springfoundation.studentorg.berkeley.edu/](https://springfoundation.studentorg.berkeley.edu/).
 
 ## About Spring Foundation
 Spring Foundation is dedicated to empowering underprivileged children in rural China through education. Founded and run by UC Berkeley students and alumni, the organization serves with a mission to make a lasting difference in the lives of rural Chinese youth.
@@ -55,7 +55,7 @@ To contribute to this project:
 Website designed and developed by [Xinwei Li](https://github.com/li-xinwei).
 
 ## Contact
-For more information, visit the [Spring Foundation website](https://www.springfoundation.org) or contact through the information provided on the contacts page.
+For more information, visit the [Spring Foundation website](https://springfoundation.studentorg.berkeley.edu/) or contact through the information provided on the contacts page.
 
 ## License
 This project is maintained by Spring Foundation. All rights reserved. 
